@@ -17,3 +17,10 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Msg {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  text      String?
+  updatedAt DateTime @updatedAt
+}
